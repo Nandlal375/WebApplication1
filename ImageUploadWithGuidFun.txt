@@ -1,0 +1,36 @@
+
+private readonly IWebHostEnvironment _env;
+public StudentDetailsController(IWebHostEnvironment env)
+{
+    _env = env;
+}       
+        public string? Images { get; set; } = "abc";
+        [NotMapped]
+        public IFormFile Images1 { get; set; }
+
+
+
+	   string filename = uploadFile(sd);
+       sd.Images = filename;
+								
+public string uploadFile(StudentDetail sdd)
+{
+    string fileName = null;
+    if (sdd.Images1 != null)
+    {
+        string uploadDir = Path.Combine(_env.WebRootPath, "Images");
+        fileName = Guid.NewGuid().ToString() + "-" + sdd.Images1.FileName;
+        string FilePath = Path.Combine(uploadDir, fileName);
+        using (var filestream = new FileStream(FilePath, FileMode.Create))
+        {
+            sdd.Images1.CopyTo(filestream);
+        }
+    }
+    return fileName;
+}
+
+this folder is inner wwwroot like as ==> wwwroot/Images.
+
+<td>
+    <img src="~/Images/@item.Images" class="img-thumbnail" width="70" height="70">
+</td>
