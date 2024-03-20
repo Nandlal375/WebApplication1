@@ -1,0 +1,16 @@
+Pr_FetchEpisodeAndVisitDetails
+Pr_Cdr_ClinicalSections
+Pr_Cdr_ClinicalSections_Data
+Pr_TestResults
+
+
+
+Pr_FetchEpisodeAndVisitDetails = EPISODE_VISIT_MONITORWISE_DTLS, location_master_data, 
+
+Pr_Cdr_ClinicalSections = Prescriptions_Proc_Inv, TT_fixedsections, Prescriptions_Drugs
+
+Pr_Cdr_ClinicalSections_Data  = casesheet_vitals_data, casesheet_vitals_data, diseases_data,Prescriptions_Proc_Inv,Prescriptions_Drugs, New_SDPcasesheet_Clinical_Fact
+
+
+    Pr_TestResults == Investigation_Results, Procedure_results, Investigation_Results
+

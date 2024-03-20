@@ -1,0 +1,24 @@
+## .Net Core ==> ASP.NET Core is a light-weight, open-source and cross-platform unified framework 
+              for developing web UI and web APIs. 
+
+## Features of ASP.NET Core ==>
+               .  Open-source
+               .. Cross-platform framework which runs on macOS, Linux, and Windows.   
+               ... Supports IIS, Nginx, Apache, Docker, or self-host deployment.
+               .... Built-in supports for SPA using client-side frameworks like Angular, React, Vue etc
+
+
+## What ASP.NET Core doesn't have :==> Global.asax, Web.Config, Modules and Handlers, ASP.NET page life-cycle
+
+
+## Difference Between ASP.NET MVC5 And ASP.NET Core
+
+1. PROJECT STRUCTURE CHANGE
+2.     ASP.NET MVC                               .NET CORE
+
+   2.1 ==> HOSTING(Project deploy)              HOSTING(Project deploy) 
+           only (IIS)                           IIS/APACHE/NGINX
+
+   2.2 ==> MOBILE APP DEVELOPMENT(NOT TOOLS)    MOBILE APP DEVELOPMENT(Xamarin)
+
+
