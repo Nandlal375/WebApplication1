@@ -1,0 +1,21 @@
+======= ###### Web Api ###### ==========
+1. What is Web Api 
+Answer ==> Web API, or ASP.NET Web API, is a framework for building HTTP services that can be accessed by a wide range of clients including browsers. 
+mobile devices, and desktop applications.
+
+2. How many type of Web Api
+Answer ==> (4 type) open APIs,partner APIs, internal APIs, and composite APIs.
+
+open APIs ==> A public API is open and available for use by any outside developer or business
+partner APIs ==> Also called external APIs, these APIs facilitate communication and data exchange between different businesses, organizations, or entities
+internal APIs ==> A type of web API
+composite APIs ==> A type of web API 
+
+3. Mainly two different approaches to API design.
+  Answer ==> 3.1 ==> SOAP (Simple Object Access Protocol).
+          3.2 ==> REST (Representational State Transfer)
+
+4. What is Difference between Web Api vs WCF.
+Answer ==>  WCF(Follow Archutecture pattern SOAP). protocole(HTTP, UDP)
+            Web Api(Follow Architecture pattern Rest). protocole(only HTTP).
+
