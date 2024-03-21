@@ -25,5 +25,21 @@ Answer ==> 5.1 Client Server
        ==> 5.3 cacheable
        ==> 5.4 Unified
 
+6. Status Code :::
+   6.1 => 1XX : Information.
+   6.2 => 2XX : Successfully.
+   6.3 => 3xx : Redirection.
+   6.4 => 4xx : Client Error.
+   6.5 => 5xx : Server Error.
+
+7. Content Negotiation
+Answer ==> I want to data get Xml formate or JSON Format from postman or swagger.
+
+8. Apply Migration
+Answer ==> COde fire As like code First Approach or database First Apploach.
+
+
+
+
 
 
