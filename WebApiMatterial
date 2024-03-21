@@ -19,3 +19,11 @@ composite APIs ==> A type of web API
 Answer ==>  WCF(Follow Archutecture pattern SOAP). protocole(HTTP, UDP)
             Web Api(Follow Architecture pattern Rest). protocole(only HTTP).
 
+5.REST API Constrants/Guidence
+Answer ==> 5.1 Client Server
+       ==> 5.2 state
+       ==> 5.3 cacheable
+       ==> 5.4 Unified
+
+
+
