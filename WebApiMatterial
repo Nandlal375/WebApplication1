@@ -38,6 +38,12 @@ Answer ==> I want to data get Xml formate or JSON Format from postman or swagger
 8. Apply Migration
 Answer ==> COde fire As like code First Approach or database First Apploach.
 
+9. API Mainly devided Three Part.
+Answer ==> 9.1 = Header (Header Mainly Define two part of Api First Algorithm {"alg" : "HS256"} Second is Type {"typ" : "JWT"}).
+           9.2 = Payload (All sensitive data like {subject, username, password}).
+           9.3 = Signature.(It is a secrate key and apply on the server it contain information valid or not).
+
+
 
 
 
