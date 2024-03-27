@@ -1,0 +1,20 @@
+======= ***** Migration For Database First Approach ***** =====
+
+Scaffold-DbContext "server=NANDLAL\SQLEXPRESS01;database=DatabaseFirstEf;trusted_connection=true;TrustServerCertificate=True;"Microsoft.EntityFrameworkCore.SqlServer
+
+======= ***** Migration For Database First Approach A Context File And All model file Is store In Module Folder ***** =====
+
+Scaffold-DbContext "server=NANDLAL\SQLEXPRESS01;database=DatabaseFirstEf;trusted_connection=true;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+
+
+====== ***** If Database Any Changed Like New table create, table change any column name then fire this command ***** ====== 
+
+Scaffold-DbContext "server=NANDLAL\SQLEXPRESS01;database=DatabaseFirstEf;trusted_connection=true;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -force
+
+
+
+======= ***** Localdata base setting ***** =====
+
+"ConnectionStrings": {
+  "DefaultConnection": "Server=DESKTOP-A4IG87P\\SQLEXPRESS;Database=DatabaseFirstEf;user=root;password=;"
+},
