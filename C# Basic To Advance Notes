@@ -1,0 +1,381 @@
+
+====================================================================== basic c# tutorial Start ================================================
+
+================================================================    Learn By(Channel Name = Learning Never Ends) =================================
+
+1.Introduction
+2.CLR(Common Language Runtime)
+3.DataType
+4.Constant Variable
+5.Date And Time Specifier
+6.Statement And Expression (All Other Loop Operator)
+7.Array
+8.Method or Function = intance type method => public void a1(), Static type Mthode => public static int a1()
+9.Value Type And Refrence Type (object Or Data Type)
+10.Pass By Value And Pass By Reference
+11.Static And Instance Member
+12.Static Class
+13.Access Specifier OR Access Modifier
+14.Properties {get Set}
+
+
+15.1 Generic Collection ==== A generic Collection is strong type.
+   15.1.1 == List
+   15.1.2 == Stack
+   15.1.3 == Queue
+   15.1.4 == Dictionary
+   15.1.5 == SortedList
+   15.1.5 == SortedList
+
+15.2 Non-Generic Collection == A Non-Generic collection is not strong type.
+ 
+   15.2.1 ==> HashTable
+   15.2.2 ==> Stack
+   15.2.3 ==> Queue
+   15.2.4 ==> ArrayList
+   15.2.5 ==> SotredList
+
+
+Where T is define Any datatype.
+Generic Collection Define following Class is Given Below
+1.List<T>
+2.Dictionary<Tkey, Tvalue>
+3.SortedList<Tkey, Tvalue>
+3.Queue<T>
+4.Stack<T>
+5.HashTable<T>
+
+
+16.Collection in C#  ==> A collection is a set of related data that may not necessarily belogn to the same data type can be set or modify dynamic at run-time
+ 
+
+ ArgumentNullException == Value cannot be null. Parameter name: String
+ FormatException == Input string was not in a correct format.
+ NullReferenceException == Object reference not set to an instance of an object.
+ IndexOutOfRangeException == Index was outside the bounds of the array.
+ 
+ Object --> Exception --> 
+ 
+ 1.Exception Devided two part
+   1.1 System Exception
+   1.2 Application Exception
+   
+   
+1.1 System Exception
+    1.1.1 ExternalExecption
+    1.1.2 ComExecption
+    1.1.3 AggregateExecption
+    1.1.4 ArgumentExection
+    1.1.5 DividedbyZeroException
+    1.1.6 NullReferenceException
+    1.1.7 OverflowExection
+
+1.1.4 ArgumentExection
+      1.1.4.1 ArgumentNullException
+      1.1.4.2 ArgumentOutOfRangeException
+
+
+2. Finally Block ==> finally Block in c# can be used to put cleanup code such as closing a file closing connection etc.	  
+
+3. Throw Keyword ==> this keyword is use of generate own throw message. (for like Exception Message)
+
+4. Partial Class ==> It provided a special ability to implement the functionality of a single class into multiple files and all these files are combined into a single class 
+                     file when the application is compiled.
+					 
+5.Param Keyword ==> Params is an important keyword in C#. It is used as a parameter which can take the variable number of arguments. 
+                    Important Point About Params Keyword : It is useful when programmer don't have any prior knowledge about the number of parameters to be used.
+					
+6.Multithreading ==> Multithreading in C# is a process in which multiple threads work simultaneously. It is a process to achieve multitasking. 
+                     It saves time because multiple tasks are being executed at a time. 
+					 To create multithreaded application in C#, we need to use System. Threding namespace.		
+
+7.Extension Method ==> In C#, the extension method concept allows you to add new methods in the existing class or in the structure 
+                       without modifying the source code of the original type and you do not require any kind of special permission from the original type and 
+                       there is no need to re-compile the original type.
+					 
+8.Structure In c# ==> Structure is a value type and a collection of variables of different data types under a single unit. 
+                      It is almost similar to a class because both are user-defined data types and both hold a bunch of different data types. 
+
+9.File Handling ==> File Handling involves management of files. Files are a collection of data that is stored in a disk with a name and a directory path. 
+                    Files contain input as well as output streams that are used for reading and writing data respectively.			
+                    
+					Stream ==> Stream is basically the sequence of byte (Passing through the communition path between hardisk to Ram).
+					Input Stream ==> File Reading Operation is called input stream
+					OutPut stream ==> File Writting Operation is called Output stream.
+					NameSpace ==> System.IO.
+					
+					
+10.DirectoryInfo ==> DirectoryInfo class is a part of System.IO namespace. It is used to create, delete and move directory. 
+                     It provides methods to perform operations related to directory and subdirectory. 
+					 It is a sealed class so, we cannot inherit it.
+					 
+11.File Stream ==> The FileStream is a class used for reading and writing files in C#. It is part of the System.IO namespace. 
+                   To manipulate files using FileStream, you need to create an object of FileStream class. 
+                   This object has four parameters; the Name of the File, FileMode, FileAccess, and FileShare. The Syntax to declare a FileStream object is given as	
+				   
+		Syntax ==> FileStream fileObj = new FileStream(file Name/Path, FileMode.field, FileAccess.field, FileShare.field);		   
+				
+12.Stream Writer ==> C# StreamWriter class is used to write characters to a stream in specific encoding. It inherits TextWriter class. 
+                     It provides overloaded write() and writeln() methods to write data into file.
+					 
+13.Stream Reader ==> C# StreamReader class is used to read string from the stream. 
+                     It inherits TextReader class. It provides Read() and ReadLine() methods to read data from the stream.
+					 
+14.Boxing ==> 		Converting a value type to a reference type is called called boxing.
+   Example ==>      int a = 10;
+                    object obj = a; (Boxing)
+
+15.UnBoxing ==>     converting a reference type to a value type is called unboxing in C#.			 
+   Example  ==>     int a = 10;
+                    object obj = a;
+					int b = (int) obj; (UnBoxing)
+					
+					
+16.GUID ==>  We use GUID for unique identifier. Now a question arise if we already have primary key than why we use Globally Unique Identifier(GUID). 
+             we use GUID because it have very low probability of being duplicated as it is 128-bit integer(16 bytes) 
+             which allow to use GUID across all databse and computer without data collision.
+
+17.Is keyword ==> The is operator is used to check if the run-time type of an object is compatible with the given type or not. 
+                  It returns true if the given object is of the same type otherwise, return false. It also returns false for null objects.
+				  
+18. As Keyword ==> The as operator is used to perform conversion between compatible reference types or Nullable types. 
+                   This operator returns the object when they are compatible with the given type and return null 
+				   if the conversion is not possible instead of raising an exception.				  
+				   
+19.Null Coalesce Operator (??) ==> The ?? operator is also known as the null-coalescing operator. 
+                                   It returns the left side operand if the operand is not null else it returns the right side operand 				   
+								   
+								   
+20.Serilization ==> In C#, serialization is the process of converting object into byte stream so that it can be saved to memory, file or database
+
+     Type of Serilization ==> 1. Serilization of Binary
+                              2. Serilization of XML
+                              3. Serilization of Json
+
+21.Deserilazation ==> The reverse process of serialization is called deserialization. Serialization is internally used in remote applications.
+
+22.Concrete Class ==> Concrete class is nothing but normal class, we can use as a base class or may not. 
+                      Not compulsory, it can't contain abstract methods. we can create object and work with this class. 
+                      A concrete class is used to define a useful object that can be instantiated as an automatic variable on the program stack.							  
+					  
+23. Dependency Injection ==> Dependency Injection (DI) is a software design pattern that allows us to develop loosely coupled code.
+                       
+     	Dependency Injection is sum of = loosely coupled code + tight coupled code;
+
+   Loosely coupled code ==> Loose coupling is a design goal that seeks to reduce the inter-dependencies between components of a system with the goal of reducing 
+                            the risk that changes in one component will require changes in any other component. 
+		                    Loose coupling is a much more generic concept intended to increase the flexibility of a system, 
+						    make it more maintainable, and makes the entire framework more "stable"		
+							
+	tight coupled code ==> A Tightly Coupled Object is an object that needs to know quite a bit about other objects and are usually highly dependent on each other's interfaces. 
+	                       Changing one object in a tightly coupled application often requires changes to a number of other objects. In a small application we can easily identify 
+						   the changes and there is less chance to miss anything. But in large applications these inter-dependencies are not always known by every programmer or 
+						   there is a chance of overlooking changes. But each set of loosely coupled objects are not dependent on each other. (Stackoverfow-Jom George).
+
+	There Are Three Type of DI in c# ==> 
+	                       1.Constructure Injection
+						   2.Setter or Property Injection
+						   3.Method Injection
+						   
+23.1 Constructure Injection ==> Dependency Injection is done by supplying the DEPENDENCY through the class's constructor when creating the instance of that class. 
+                                The injected component can be used anywhere within the class. 
+                                Recommended to use when the injected dependency, you are using across the class methods.
+								
+23.2 Property Injection ==> In Property Dependency Injection, the Injector needs to Inject the Dependency Object through a public property of the client class.
+
+23.3 Method Injection ==>  Method Injection supplies a consumer with a Dependency by passing it as method argument on a method called outside the Composition Root.
+                             								
+	
+24.ENUM (ENUMERATION) ==> Enum is a set of Constant.
+                          An enum is a special "class" that represents a group of constants (unchangeable/read-only variables).
+
+25.Async And Wait ==> The async keyword turns a method into an async method, which allows you to use the await keyword in its body
+
+     Async ==> An async keyword is a method that performs asynchronous tasks such as fetching data from a database, reading a file, etc, they can be marked as “async”.
+     Wait ==> Whereas await keyword making  “await” to a statement means suspending the execution of the async method it is residing in until the asynchronous task completes.
+
+                          						  
+====================================================================== basic c# tutorial End =====================================================
+
+
+
+
+ ================================================================ C# OOPS CONCEPT START ================================================================
+
+1.Class ==> A class is a data structure in C# that combines data variables and functions into a single unit.
+2.Object ==> Instances of the class are known as objects. While a class is just a blueprint, the object is an actual instantiation of the class and contains data. 
+
+3.Constructor ==> A constructor is a special method of the class which gets automatically invoked whenever an instance of the class is created
+            
+             ==> Constructor is Five Type
+		 3.1 ==> Default Contructor
+         3.2 ==> Parameterized Contructor
+		 3.3 ==> Static Constructor.
+		 3.4 ==> Copy Constructor.
+		 3.5 ==> Private Constructor.
+
+3.1. Default Constructor ==> The term "default constructor" refers to a constructor that accepts no input arguments.
+3.2. Parameterized Constructor ==> A constructor having at least one parameter is called as parameterized constructor. 
+                                   It can initialize each instance of the class to different values. 
+3.3. Static constructor ==> A static constructor is used to initialize any static data, or to perform a particular action that needs to be performed only once.
+                        ==> Does not take any parameter OR Access Modifier.
+						
+3.4 Copy Constructor ==> A constructor that creates an object by copying variables from another object or 
+                         that copies the data of one object into another object is termed as the Copy Constructor. 						
+								   
+3.5 Private Constructor ==> Private constructors are used to prevent creating instances of a class when there are no instance fields or methods, 								   
+								   
+								   
+4. Contructor OverLoading ==> It is the ability to redefine a Constructor in more than one form. 
+                              A user can implement constructor overloading by defining two or more constructors in a class sharing the same name.
+                              C# can distinguish the constructors with different signatures.							  
+
+
+5.Instance Member ==> An instance member is essentially anything within a class that is not marked as static
+6.Static Member ==> The static member is callable on a class even when no instance of the class has been created. 
+                    The static member is always accessed by the class name, not the instance name. Only one copy of a static member exists
+					
+	    CLASS MEMBER == [Field, Method, Constructor, Indexer, Event, Properties]
+		
+7.Static Class ==> In C#, static means something which cannot be instantiated. You cannot create an object of a static class and cannot access static members using an object. 
+                   C# classes, variables, methods, properties, operators, events, and constructors can be defined as static using the static modifier keyword. 		
+
+
+		
+8.Destructor ==> Destructors in C# are methods inside the class used to destroy instances of that class when they are no longer needed  
+             
+ Syntax ==> 
+           class Example
+       { 
+             // Rest of the class
+            // members and methods.
+
+            // Destructor
+           ~Example()
+    {
+        // Your code
+    }
+
+      } 
+
+9.Inheritance ==> Inheritance is a fundamental concept in object-oriented programming that allows us to define a new class based on an existing class. 
+                  The new class inherits the properties and methods of the existing class and can also add new properties and methods of its own. 
+				  Inheritance promotes code reuse, simplifies code maintenance, and improves code organization.
+
+    Type Of Inheritance 
+	       1. Single Inheritance.
+		   2. Hierarchical
+		   3. Multilevel
+		   4. Multiple (Useing Interface)
+	
+10. Four Pilar Of OOPS
+     
+    10.1 ==> Inheritance
+    10.2 ==> Polymorphism
+    10.3 ==> Abstraction
+    10.4 ==> Encapsulation	
+		   
+11. Encapsulation ==> Encapsulation is the concept of wrapping data into a single unit. It collects data members and member functions into a single unit called class. 
+                     The purpose of encapsulation is to prevent alteration of data from outside. 
+                     This data can only be accessed by getter functions of the class. 		   
+
+12. Properties With Get And Set ==> Properties are the special type of class members that provides a flexible mechanism to read, write, or compute the value of a private field.
+
+13.Polymorphism ==> Polymorphism is a Greek word meaning "one name many forms." "Poly" means many, and "morph" means forms. 
+                    In other words, one object has many forms or has one name with multiple functionalities. 
+                    Polymorphism allows a class to have multiple implementations with the same name. 
+					
+     Two Type Of Polymorphism
+	 
+              13.1 ==> Static Polymorphism (Compile time Polymorphism)
+			  Definition ==> The machanism of linking a function with an object during compile time is called static polymorphism or early binding it also known static binding.
+			  
+			  C# provided two technique to implement static polymorphism.
+			  
+			  1.Method or Function OverLoading. [Example = Add(int a, int b), Add(int a, int b, int c)]
+			  2.Operator OverLoading. [Example ==> public static NewClass operator + (NewClass newClass, NewClass newClass1) {THIS function make}]
+			  
+			  
+			  
+              13.2 ==> Dynamic Polymorphism (Run time Polymorphism)			  
+			  
+              13.1.1 Method Overiding ==> Method Overriding is a technique that allows the invoking of functions from another class (base class) in the derived class. 
+			                       Creating a method in the derived class with the same signature as a method in the base class is called as method overriding.
+			   
+
+14. Method Hiding ==> Method hiding in occure in inheritance relationship when base class and derived class both have method with same name and same signature.
+
+15.Sealed Class ==> Sealed classes are used to restrict the users from inheriting the class. A class can be sealed by using the sealed keyword. 
+                    The keyword tells the compiler that the class is sealed, and therefore, cannot be extended. 
+                    No class can be derived from a sealed class. 
+
+16.Sealed Method ==> Sealed method is used to define the overriding level of a virtual method.Sealed keyword is always used with override keyword.
+
+17.Indexers ==>  An indexer allows an object to be indexed such as an array. When you define an indexer for a class, this class behaves similar to a virtual array.
+
+18.Delegates ==> A delegate is a type that represents references to methods with a particular parameter list and return type
+                 A delegate is an object which refers to a method or you can say it is a reference type variable that can hold a reference to the methods.
+				 
+		Type Of Delegates ==
+             1. Multiple Delegates  == Create multiple delegate with multiple method
+             2. Single Cast Delegates = One delegate to One method
+             3. Multi Cast delegates = One delegate create for multiple method. And Wrapped all method in single delegate; use {+=}		
+			 4. generic delegate [Func delegate, Action delegate, Predicate delegates {All predefine delegate}]
+
+19.Anonymous Function ==> Without delegate Anonymous function not use in c# 
+                          An anonymous method is a method without a name. Anonymous methods in C# can be defined using the delegate keyword 
+						  and can be assigned to a variable of delegate type.
+
+20.Lamda Expression ==> The ‘=>’ is the lambda operator which is used in all lambda expressions. The Lambda expression is divided into two parts, 
+                        Lambda expressions in C# are used like anonymous functions,
+						
+				USE ==> ALL reference type variable use lamda expression AS [collection, Arrar, delegate];		
+						
+                        the left side is the input and the right is the expression. 			
+    Syntax ==> input => expression;						
+
+21.Abstraction ==> Abstraction is an important part of object oriented programming. 
+                   It means that only the required information is visible to the user and the rest of the information is hidden
+				   
+22.Abstract Class ==> Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class). 
+                      Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from). 				   
+
+23.Abstract Properties ==> Abstract property create on abstract member, which is use in the abstract class. You are define abstract property in a class , 
+                           when inherit the abstract class in other non-abstract class.
+
+24.Interface ==> Interface in C# is a blueprint of a class. It is like abstract class because all the methods which are declared inside the interface are abstract methods. 
+                 It cannot have method body and cannot be instantiated.
+			==> Interface Contain Only Declaration of All Member [method, event, properties]; 
+            ==> Interface Not contain Field AS [int a = 10]		
+            ==> All member bydefault Public.			
+				 
+25.Multiple Inheritance ==> Multiple Inheritance is a feature in which a class can inherite characters and feature from more than one parent class.  				 
+
+
+26. Enumerator ==> An enumerator helps you enumerate (iterate) over a collection of items
+
+27. Yeild ==> The yield keyword signals to the compiler that the method in which it appears is an iterator block.
+
+28. Tuple ==> Tuple is used to return multiple value from a method (return type value can be [same type or different type]).
+
+
+
+
+
+
+
+ ================================================================ C# OOPS CONCEPT END ================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
