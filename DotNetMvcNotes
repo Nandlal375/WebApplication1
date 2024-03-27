@@ -1,0 +1,293 @@
+
+===============================Asp Dot Net MVC 5 Start ==========================================
+ MVC ==> Modal View Controller.
+ 
+1. Controller ==> A controller is responsible for controlling the way that a user interacts with an MVC application. 
+                  A controller contains the flow control logic for an ASP.NET MVC application.
+
+2. Action Method ==> Action method are public in controller class.
+                 ==> What is the Action Method in MVC 5. ASP.NET MVC action methods are responsible to execute the request and generate a response to it.
+				 
+				 2.1 Rules that you need to consider while creating an action method are as following
+				 
+				     2.1.1 ==> They must be declare as public
+					 2.1.2 ==> Action method must be public. It cannot be private or protected or static.
+					 2.1.3 ==> they cannot have overloded version based on parameters.
+					 
+					 
+	Action Result ==> Action result is an abstract base class for all implement classes that proveded different types of results.
+                  Example ==> return any result but use Action Result 
+                              like :. [ViewResult ==> View()
+                                       PartialViewResult
+                                       EmptyResult
+                                       RedirectResult
+                                       JsonResult
+                                       JavascriptResult, ContentResult, FileContentResult, FileStreamResult, FilePathResult]									   
+
+3. several types of action results ==> ActionResult, ViewResult, EmptyResult;
+
+      3.1 ActionResult==> An action result is what a controller action returns in response to a browser request.
+	  
+	  
+
+4. View ==> Provided The Ui of the to the user.
+ 		==> View both HTML markup and c# code that runs on the brower.
+        ==> file name .cshtml.
+
+5.Razor ==> View Engine of Asp.net Mvc.
+6.Razor Syntax ==> inline and multiline or Expression.
+               ==> Condition, If, Else, Switch.
+               ==> declare variable var keyboard and Other c# data type. AS = {var, int16, int, string} 		
+
+            6.1 Inline Syntax ==> <p>Today date and Time : @DateTime.Now</p>
+			6.2 Multiline ==> @{
+                              //string name = "Nandu";
+                              //var a = "Rao";
+                              //Response.Write("name ==" + name);
+                              //Response.Write("name ==" + a);
+	                          
+                              int mark = 75;
+                              if (mark >= 75)
+                              {
+                                  <h2>Number is = @mark</h2>
+                              }
+                              else { 
+                                    <h2>Not valid number</h2>
+                                  }
+                               }
+
+7. You can use the following object to pass data between controller and view
+           
+		   7.1. ViewData ==> ViewData is a dictionary of objects that are stored and retrieved using strings as keys. It is used to transfer data from Controller to View. 
+		                     Since ViewData is a dictionary, it contains key-value pairs where each key must be a string. ViewData only transfers data from controller to view,
+		          Syntax ==> ViewData["key"] = value;
+		   
+		   
+		   7.2 ViewBag ==> In general, ViewBag is a way to pass data from the controller to the view. It is a type object and is a dynamic property under the controller base class.
+		       Syntax ==> ViewBag.propertyName = value;
+		   
+		   
+		   7.3. Tempdata ==> TempData is used to transfer data from the view to the controller, the controller to the view, or from an action method to another action method of the same 
+		                     or a different controller.TempData temporarily saves data and deletes it automatically after a value is recovered. 
+
+8.Session ==> A session is used to maintain state between requests in a stateless web environment, such as user authentication.
+
+9.HTML Helper ==> What is HTML Helper in ASP.NET MVC 5? HTML Helpers are methods that return a string. Helper class can create HTML controls programmatically. 
+                  HTML Helpers are used in View to render HTML content.
+				  
+		Some Html helper method ==>
+                                  1. HTML.ActionLink()
+                                  2. Html.BeginForm() and Html.EndForm()
+                                  3. html.label()
+                                  4. html.textbox()
+                                  5. html.textarea()
+                                  6. html.Password()
+                                  7. html.checkbox()								  
+
+10. Master Page. _Layout.cshtml
+
+11. Strongly Type View ==> The view binds with any modal class is called as strongly typed view.
+
+12.Partial View ==> Partial view in ASP.NET MVC is special view which renders a portion of view content. It is just like a user control of a web form application. 
+                   Partial can be reusable in multiple views. It helps us to reduce code duplication. In other word a partial view enables us to render a view within the parent view.
+
+    Partial view is two type ==>
+	                 1. Static View [Content not change == as. header, footer, navigation bar]  
+					 2. dynamic view [Content change be accordingly]
+					 
+13. Static partial view we use two method of html helper class
+               
+			   13.1 ==> HTML.Partial()
+			   13.2 ==> HTML.RenderPartial()
+			   
+			   
+14. Dynamic Partial view we use two method of html helper class
+           
+              14.1 ==> html.Action
+              14.2 ==> html.RenderAction
+
+15. Strongly Type HTML Helper In Mvc
+            
+			==> It Enables these helper method to directly associates with modal properties in a strongly view
+            ==> Following HTML Helper strongly type
+			    
+				1.html.LabelFor()
+				2.html.DisplayNameFor()
+				3.html.DisplayFor()
+				4.html.TextboxFor()
+				5.html.TextAreaFor()
+				6.html.EditorFor()
+				7.html.PasswordFor()
+				8.DropDownListFor()
+				
+16. Validation Message And Validation Summary Helper method of html in Asp.net MVC
+
+     Validation Message ==> @Html.ValidationMessage("fullName", new {@class = "text-danger"})
+	 
+	                    ==> Html.Validation() method use indivisual input field errore message show on the brower. 
+	 
+	 
+	 
+	 Validation Summary ==> @Html.ValidationSummary(null, new { @class = "text-danger"})
+	 
+                       ==> Html.ValidationSummary() method is use of all errore message in the one place [top or footer]
+    				
+			  
+17.Data Annotation ==> The MVC FrameWork provided several data annotations that you can apply as attributes to a model.
+                   ==> Some of the Important Annotation that you can use in the Model
+
+                   1. Required [Example given below (Associate with Model Class on the There Properties)]
+				   
+				        Example = [Required(ErrorMessage = "Id is Required")]
+                                   public int EmployeeId { get; set; }
+				   
+                   2. StringLength
+				   
+				   example = [StringLength(20, MinimumLength = 5, ErrorMessage = "Name should be 5 to 20 between length")]
+				   
+                   3. RegularExpression
+				   
+				   Example == [RegularExpression("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?", ErrorMessage ="Invalid Email")]
+        		   
+                   4. Range
+				   
+				   Example ==> [Range(20,60,ErrorMessage ="Invalid Age")]
+				   
+                   5. Compare == You Can use the compare annotations to compare values in two field. 
+				   
+				   Example ==>  [Compare("EmpPassword", ErrorMessage ="Your input password does not match")]
+				   
+                   6. DisplayName == For Display the Label Name
+				   
+				   example == [DisplayName("Password")]
+				   
+                   7. ReadOnly ==> You can use the ReadOnly Annotation to display read-only field on a form.
+				   
+				   example ==> [ReadOnly(true)]
+				   
+				   
+                   8. DataType ==> You can use the datatype annotations to provide infomation about the specific purpose of a property at run time.
+				   syntax = [DataType(DataType<value>)]
+				   =>Password
+				   =>MultilineText
+				   =>DateTime
+				   =>Time
+		
+		
+                   9. ScaffoldColumn				   
+
+18.Entity FrameWork ==> 
+                    18.1 ==> The Entity FrameWork is an ORM FrameWork that ASP.Net Mvc application can use.
+					18.2 ==> The Entity FrameWork is an implementation of the Entity data modal (EDM).
+                    183. ==> EDM is a set of concept that describe the structure of data.
+					18.4 ==> It is an enhancement to Ado.Net that gives developers an automated mechanism for accessing the data in the database.
+                    18.4 ==> Using the Entity FrameWork developers issue queries using LINQ(Language integrated query), then retrieve and manipulate data as strongly type object. 					
+
+ Entity == Table (Use this word)
+ 
+ ThereFor, We can Say that == ORM == Entity FrameWork + EDM + LINQ + CFA(Code First Approach). 
+ 
+19. Uses different approaches to manage data related to an application in Entity FrameWork
+
+        19.1 Code First Approach.
+		19.2 Database First Approach.
+		19.3 Model First Approach.
+		
+		
+19.1 Code First Approach ==> In the code-First-Approach the entity FrameWork creates database objects based on the model classes that you create to represent application data.
+            
+        19.1.1 ==> Then, You can create database based on the models.
+		
+19.2 Database First Approach ==> In the database-first approach the entity framework creates model classes and properties corresponding to the existing database object, such
+                                 as table and column.
+								 
+							==> The database first approach is applicable in scenario where a database already exists for the application.
+            							
+		
+20. SCAFFOLD Column Data Annotation ==> When you use scaffolding using the create template the view by default will create ui field for all the properties of the model.
+                                    ==> However, you might need to ensure that the template does not create ui fields for certain properties (use scaffolding column Annotation)
+									
+									
+21.Model First Approach ==> Model First Approach is great for when you are starting a new project where the database does not even exist yet. 									
+
+
+22.Filters ==> In An Asp.net MVC Application there might be situations where you need to implement some functionality before or after the execution of an action method.
+
+      Filter Implement => CLient -> Route -> Controller -> Action Method -> View
+	  
+	  22.1 There Are Five Type of Filters in asp.net mvc 5
+	  
+	       1. Authentication Filters
+		   2. Authorization Filters ==> [Authorize]
+		   3. Action Filters
+		   4. Result Filters  ==> [OutPutCache(Duration=10)]
+		   5. Exeption Filters -> [HandleError] or [HandleError View = "Error2 {this page is shared folder inner}"]
+		   
+23. While developing an ASP.NET Application, we can use filteres at the following level
+
+    23.1 ==> Action Method Level
+    23.2 ==> Controller Level
+    23.3 ==> Application Level	
+
+
+24.Authorization Filter ==> Authorization is the process of verifying whether an authenticated user has the privilege to access a requested resource.
+   
+   24.1 ==> Authentication Filter ==> Authentication is the process of validating the identical of a user before granting access to a restricted resource in an application.
+
+   Given architecture (Authentication) given below :=>
+ 
+   IAuthorizationFilter -> System.web.Mvc -> FilterAttribute -> AuthorizeAttribute (Class) -> Authorize(Object/Attribute) -> 
+   
+   
+25. Result Filter ==> A result filter operates on the result that an action method returns.
+
+   given architecture => OutPutCacheAttribute (class) -> [OutPutCache(Duration=10)] {Object}
+   
+   25.1 ==> Location Property specific where the output is to be cached/store. It takes enum value and can be stored at:
+        ==> Any (default value)
+		==> client 
+		==> Downstream(proxy server)
+		==> None(no caching)
+		==> Server
+		==> ServerAndClient
+		
+		
+		
+26. Working with Ajax in Mvc 5 we can implement two things
+
+    1. Ajax.BeginForm()
+	2. Ajax.ActionLink()
+
+    2.1 Example ==> @Ajax.ActionLink("Top 3 Age", "Top3Age", "Home",
+                    new AjaxOptions()
+                    {
+                        HttpMethod = "GET",
+                        InsertionMode = InsertionMode.Replace,
+                        UpdateTargetId = "DivUpdate",
+	                
+                    })   
+					
+					
+27. Custom HTML Helper ==> There are two way to create custom html helper
+                           1. ==> Using static class And Static method
+						   2. ==> Using Extension Method
+						   3. ==> TagBuilder Class.
+						   
+28. Routing ==> Mainaly Routing is two type.
+    
+        28.1 ==> Attribute routing.
+        28.2 ==> Traditional routing.		
+					
+
+===============================Asp Dot Net MVC End ==========================================
+
+ RestFull Web Api Contain Thing:
+
+  1. Independent Client Server Communication.
+  2. Stateless
+  3. chacheable
+  4. Uniform Interface
+  5. Layer based
+  
+  
+  Migration ==> 
