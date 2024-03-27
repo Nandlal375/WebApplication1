@@ -1,0 +1,109 @@
+==============Page Life cycle stages in Asp Dot Net==========
+
+1.Page Request
+2.Start
+3.Initilization
+4.Load
+5.Postback Event Handling
+6.Rendering
+7.Unload
+
+
+============ASP.NET Life Cycle Events=====================
+a. Page Level Event
+b. Application Level Event
+c. Controller Level Event
+
+===Below All Part Page Level Event====
+
+1.PreInt
+2.Int
+3.Incomplete
+3.Preload
+4.Load
+5.Control Events
+6.LoadComplete
+7.PreRender
+8.PreRender Complete
+9.Save State Complete
+10.Render
+11.Unload
+
+
+
+================Application Level Event===================
+
+1. Application_Start
+2. Application_End
+3. Application_Errore
+4. Session_Start
+5. Session_End
+
+===============Control Level Event=================
+1.Textbox
+2.Button
+3.TextChanged
+4.Click
+
+
+
+======What is the State Management=============
+
+State Management Definition ==> State management is a process of maintaining the state of values between multiple request of the page(s).
+ => when make the statefull web Application then required state management technique.
+ 
+=> State management is The two type 
+   
+   1. Client Side State management Technique
+     
+     1.1 =>Cookies. 
+     1.2 =>ViewState.     
+     1.3 =>HiddenField.
+     1.4 =>QueryString.
+     1.5 =>Control State
+     
+   2. Server Side State Management
+
+     2.1 => Session State 
+     2.2 => Application State  AS {Application["Name"] = lblname.Text}
+
+
+
+====== Page Navigation Technique======
+
+ 1. HyperLink Control
+ 2. Response.Write()
+ 3. Responde.redirect()
+ 4. Server.Transfer()
+ 5. Server.Execute()
+ 6. Cross-Page postback
+ 7. Window.Open()
+
+
+
+Caching ==> Caching enables you to store data in memory for rapid access. As like {[<%@ OutputCache Duration="30" VaryByParam="None" %>]}
+
+Mostly, there are 3 types of caching. ==> 
+                                        1. Output Caching
+										2. Data Caching
+										3. Fragment Caching 
+
+## Fragment Caching ==> Fragmentation Catching is used for some portion of the page to be cached and we can do Fragmentation Caching using a User Control.
+
+## Data Caching ==> Data Caching is basically used for reducing database contention and round-trips, in other words by using Data Caching we store required data in a cache 
+                    so the Web Server does not send a request to the database for every request so that the database performance will also increased. 
+                    The data cached is a Full-Featured Cache Engine that enables you to store and retrieve data between multiple HTTP requests 
+                    and multiple sessions within the same application.
+
+
+            Example ==> Dataset ds = Getdata()
+			            Cache["Productdata"] = ds;
+                        griedview1.dataSource = ds;
+						griedview1.databind();
+						
+## Output Cache ==> <%@ OutputCache Duration="30" VaryByParam="None" %>;
+
+## Panel Control ==> The Panel control is used as a container for other controls. 
+                     This control is often used to generate controls by code and to display or hide groups of controls as per the condition.
+					 
+					
