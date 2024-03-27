@@ -43,6 +43,10 @@ Answer ==> 9.1 = Header (Header Mainly Define two part of Api First Algorithm {"
            9.2 = Payload (All sensitive data like {subject, username, password}).
            9.3 = Signature.(It is a secrate key and apply on the server it contain information valid or not).
 
+10. Repository Add Three Type.
+Answer ==> 10.1 => builder.Services.AddTransient<IAuthService, AuthService>();
+           10.2 => builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+           10.3 => Not Knowledge.
 
 
 
