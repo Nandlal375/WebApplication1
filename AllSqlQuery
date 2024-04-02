@@ -1,0 +1,25 @@
+DataBase Name => colleage
+
+CREATE DATABASE colleage
+CREATE TABLE Employee(EmpId int not null identity(1,1), EmpName varchar(100), salary int)
+
+INSERT INTO Employee(EmpName, salary) values ('ram', 5000)
+INSERT INTO Employee(EmpName, salary) values ('ram1', 6000)
+INSERT INTO Employee(EmpName, salary) values ('ram2', 7000)
+INSERT INTO Employee(EmpName, salary) values ('ram3', 8000)
+INSERT INTO Employee(EmpName, salary) values ('ram4', 9000)
+
+Select * from Employee
+SELECT MAX(salary) from Employee where salary < (select max(salary) from Employee)
+
+SELECT * from Employee as t1 where 2 = (select count(*) from Employee t2 where t1.salary <= t2.salary)
+
+select top 1 * from 
+(SELECT top 4 * FROM Employee order by salary desc) as temp order by salary
+
+
+
+
+
+
+
