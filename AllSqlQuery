@@ -18,6 +18,15 @@ select top 1 * from
 (SELECT top 4 * FROM Employee order by salary desc) as temp order by salary
 
 
+select *, ROW_NUMBER() over(partition by salary ORDER by salary) as rnum from Employee
+
+select * from 
+(select *, ROW_NUMBER() over(ORDER by salary DESC) as rnum from Employee)as temp
+where rnum = 2
+
+
+
+
 
 
 
