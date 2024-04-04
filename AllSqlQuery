@@ -24,6 +24,33 @@ select * from
 (select *, ROW_NUMBER() over(ORDER by salary DESC) as rnum from Employee)as temp
 where rnum = 2
 
+---Cumulative sum----
+
+-----Alternative row find even row------------
+select * from Employee where EmpId % 2 = 0
+
+-----Alternative row find odd row------------
+select * from Employee where EmpId % 2 = 1
+
+---Cumulative sum salary----
+SELECT e1.EmpId,
+       e1.Salary,
+	   e1.EmpName,
+       (SELECT SUM(e2.Salary)
+        FROM Employee e2
+        WHERE e2.EmpId <= e1.EmpId) AS CumulativeSalary
+FROM Employee e1;
+
+
+---self join-------
+SELECT A1.EmpId, A1.EmpName, A1.salary FROM Employee as A1,
+Employee as A2 where A1.EmpId = A2.EmpId
+
+
+
+
+
+
 
 
 
