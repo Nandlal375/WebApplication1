@@ -1,0 +1,17 @@
+var selectElement = document.querySelector('#ddlState');
+var stateId = selectElement.value;
+var selectElement1 = document.querySelector('#multipleSelect');
+var distric = selectElement1.value; 
+
+
+var data = "";
+var districtDetails = distric;
+for (var i = 0; i < distric.length; i++)
+{ 
+    if (i == distric.length-1) {
+        data += distric[i];
+    }
+    else {
+        data += distric[i] + ',';
+    }
+}
