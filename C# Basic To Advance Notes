@@ -390,7 +390,7 @@ Answer ==> What {First Introduced by the famous computer Scientist Robert J.Mart
         {
           Class should not be forced to implement a function they do not need.
 	}
-        29.2.5 => 
+        29.2.5 => Depedency Inversion Principle
        {
         High level classes should not depend on low level classes both should depend upon abstractions.
        }
