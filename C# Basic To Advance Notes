@@ -358,12 +358,42 @@ Generic Collection Define following Class is Given Below
 
 28. Tuple ==> Tuple is used to return multiple value from a method (return type value can be [same type or different type]).
 
+29. Solid Principle In C#
+Answer ==> What {First Introduced by the famous computer Scientist Robert J.Martin(Uncle Bob)}
+                 Solid acronym introduce later by Michael Feathers.
+                 Five principle of object oriented class design.
+                 set of rules and best practice to follow while designing a class structure.
 
+         29.1 => Why Need Solid Principle
+         Answer ==> To create understandable, readable, and testable, code that many developers can collaborative work on.
+       
+         29.2 => Full Form of SOLID
+         Answer => Single Responsibility Principle.
+                   Open-closed Principle.
+                   Liskov's Substitution Principle.
+                   Interface Segregation Principle.
+                   Dependency Inversion Principle.
 
-
-
-
-
+         29.2.1 => Single Responsibity Principle 
+         {
+           A class should do one thing and therefore it should have only a single reason to change.
+	 }
+         29.2.2 => Open Closed Principle
+         {
+          A Class should be open for Extension but closed to modification.
+	 }
+         29.2.3 => Liskov's Substitution Principle
+         {
+            Derived or child class must be substitutable for their base or parent class.
+	 }
+         29.2.4 => Interface Segregation Principle
+        {
+          Class should not be forced to implement a function they do not need.
+	}
+        29.2.5 => 
+       {
+        High level classes should not depend on low level classes both should depend upon abstractions.
+       }
  ================================================================ C# OOPS CONCEPT END ================================================================
 
 
