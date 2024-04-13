@@ -23,3 +23,80 @@
 
 
 
+#######   ====== Interview Question And Answer in Asp.Net Mvc (Start) ============######
+
+1. What Is Asp.Net Mvc And Advantage.
+Answer ==> What(Asp.Net Mvc) {Framework, software design pattern, Application devide three architecture(MVC)}.
+
+Advantage ==> [{Reach early for any Module find error, easy to understand of structure pattern, Project more systematic}]
+
+2 ==> Razor View Engine
+  what(Markup sysntax)
+  Helps write (Html + Server side code(c#)).
+  
+  
+3 ==> Routing & Ites type
+    type ==> (two type 1. {Conventional Roting, Attribute Routing}).
+    what ==> (Pattern matching System, Page Navigation Technique)
+    work ==> (which controller action method call decided by routing, IT responsible browser request controller action).
+	
+4. 	What is difference between viewbag And ViewData and Tempdata.
+
+ ViewBag (What)==>(state management, way, {controller to view data transfer (Current request)}).
+	        (work) ==>(data transfer controller to view using {Properties}, run time declaration or dynamic properties).
+			 
+ ViewData, (what) ==> (state management, way, {controller to view data transfer (Current request)}).	
+              (work) ==>(data transfer controller to view using {Key}, compile time declaration). 	
+
+ Tempdata (what) ==> (state management, way, {controller to view data transfer (current request or Other action request)}).
+          (work) ==>(data transfer controller to view using {Key}).
+		  
+ 
+5. What is The Partial View
+   What ==>(Partial view in ASP.NET MVC is a special view that renders a portion of view content.)
+   
+6. What is the MVC Life Cycle.
+   Answer: Application_Start() ==> Routing ==> MVC HANDLER ==> IControllerFactory.CreateController ==>
+   CreateTempDataProvider ==> CreateActionInvoker ==> Authentication Filter ==> Authorization Filter ==>
+   Model Binder ==> Action and Action Filter ==> Execute Result And Execute Filter ==> Controller Dispose.
+   
+   
+7. What is difference between VAR And Dynamic keyword.
+Answer ==> Var (value type, intelisence show, all type value accept, initilization value is required);
+           Dynamic (Reference type, not intelisence show, not initilization value is required);
+		   
+		   
+8. IEnumrable VS IQueryable.	
+  
+  Every Collection Class implements 3 Interface ==> IEnumrable, ICollection, IList OR IDictionary.
+  IList<T> ==> Generic classes.
+  IList ==> Non-Generic class.
+  
+  IEnumrable == What ==> (Interface)
+              Use ==> (Iterate for collection classes using Foreach loop).  
+			  
+			  
+  IQueryable == What==> (Interface)
+                Use ==> (Iterate for collection classes using Foreach loop).
+
+Difference Between IEnumrable vs IQueryable ==> {IQueryable is child of IEnumrable, In Memory collection [IEnumrable], Out Memory Collection [IQueryable]}.
+
+				
+    
+
+
+#######   ====== Interview Question And Answer in Asp.Net Mvc (End) ============######
+
+
+C## Interview question And Answer.
+
+Delegates ==> what(delegate is a type safe function pointer)
+              Work(It is a hold of function reference).
+			  
+
+Event ==> An Event is a notification send by an object to signal the occurance of an action.
+          The class who raises events is called Publisher (Only One Publisher),
+          the class who receives the notification is called Subscriber.	(Multiple Subscriber)	  
+                    OR
+		  In C#, an event is an encapsulated delegate. 
+		  It is dependent on the delegate.
