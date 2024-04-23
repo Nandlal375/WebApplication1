@@ -395,6 +395,9 @@ Answer ==> What {First Introduced by the famous computer Scientist Robert J.Mart
         High level classes should not depend on low level classes both should depend upon abstractions.
        }
  ================================================================ C# OOPS CONCEPT END ================================================================
+30. Assembly(What is) ==> Assebly is unit of deployment like as .exe and .dll;
+   ==> Type Of Assembly {private Assembly, Public Assembly/Shared Assembly, satelite Assembly}.
+
 
 
 
