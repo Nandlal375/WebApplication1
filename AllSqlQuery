@@ -46,6 +46,32 @@ FROM Employee e1;
 SELECT A1.EmpId, A1.EmpName, A1.salary FROM Employee as A1,
 Employee as A2 where A1.EmpId = A2.EmpId
 
+===============Sql Interview Question==================
+1.Indexes. {Cluster index, Non-cluster index}.
+2.Transaction.
+3.Constraints.
+
+Trigger-Special type of store procedure use to track deleted record or information(DML,DDL)
+
+View-Virtual table data not store in database(to improve performance,hide actual table information)
+
+Where,GroupBy,Having-where used for filter data on condition,GroupBy use for take value in group used by aggerigate function having clause contain aggregate function with group by
+SubQuery is Query with in Query
+
+Delete(DML)-Used to delete on or more record with condition but not delete schema(tbl structure) delete from employee where id=2,roll back
+
+Truncate(DDL)-used to delete all record,not used where condition,not delete schema(tbl structure) truncate table employee,not roll back
+
+Drop(DDL)-used to delete all record,delete schema(tbl structure) drop table employee,not roll back
+
+StoreProcedure-return or not return value,sp have i/p & o/p both parameter,call sp inside function,try catch ex in sp
+
+Function-must return value,F have only i/p parameter,not call sp inside function,try catch ex not in Funct
+
+CTE-Common Table Expression is an expression that returns a temporary result set.Reference with in SELECT,INSERT,UPDATE,DELETE
+
+Nth Higest Salary-select distinct Top(N) salary from employee order by salary desc-->select top(1) salary from (select distinct Top(N) salary from employee order by salary desc)result order by salary
+
 
 
 
