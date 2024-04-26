@@ -47,9 +47,11 @@ SELECT A1.EmpId, A1.EmpName, A1.salary FROM Employee as A1,
 Employee as A2 where A1.EmpId = A2.EmpId
 
 ===============Sql Interview Question==================
-1.Indexes. {Cluster index, Non-cluster index}.
+1.Indexes. {Cluster index ->(multiple column apply same cluster index is called composite index), Non-cluster index}.
 2.Transaction.
 3.Constraints.
+4. Store procedure optimization.
+
 
 Trigger-Special type of store procedure use to track deleted record or information(DML,DDL)
 
