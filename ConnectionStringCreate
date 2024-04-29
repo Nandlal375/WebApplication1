@@ -18,3 +18,21 @@ Scaffold-DbContext "server=NANDLAL\SQLEXPRESS01;database=DatabaseFirstEf;trusted
 "ConnectionStrings": {
   "DefaultConnection": "Server=DESKTOP-A4IG87P\\SQLEXPRESS;Database=DatabaseFirstEf;user=root;password=;"
 },
+
+===== Code First Approach //--OR--// Database First Approach Approach For Apply Install Required Package. ========
+1. Microsoft.EntityFrameworkCore.SqlServer.
+2. Microsoft.EntityFrameworkCore.Tools.
+3. Microsoft.EntityFrameworkCore.Design.
+4. Microsoft.EntityFrameworkCore
+
+program.cs file => builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+
+
+
+
+
+
+
