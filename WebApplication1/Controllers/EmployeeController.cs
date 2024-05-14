@@ -6,6 +6,9 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    // Nandlal prasad 
+
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -69,7 +72,7 @@ namespace WebApplication1.Controllers
             }
         }
 
-        [HttpPut("{id:int}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
         {
             try
@@ -125,7 +128,7 @@ namespace WebApplication1.Controllers
                 }
                 else
                 {
-                    return BadRequest($"{name} is not found");
+                  return NotFound($"{name} is not found");
                 }
             }
             catch (Exception)
