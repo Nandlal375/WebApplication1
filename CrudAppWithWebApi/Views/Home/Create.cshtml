@@ -1,0 +1,54 @@
+﻿@model DataAccessLayer.Employee
+
+@{
+    ViewData["Title"] = "Create";
+}
+<h1>Create</h1>
+<h4>Employee</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data" asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="Id"/>
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" placeholder="Enter Any Name"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" placeholder="Enter City Name"/>
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <br />
+            
+            <div class="form-group">
+                <label asp-for="countryName" class="control-label"></label><br />
+                <select asp-items="@(new SelectList(ViewBag.Country, "cname", "cname"))" class="form-control" asp-for="countryName">
+                    <option>Please select country</option>
+                </select>
+                <span asp-validation-for="City" class="text-danger"></span>
+                <br />
+            </div>
+               <div class="form-group">
+                <label asp-for="image">Image </label><br />
+                <input type="file" asp-for="image" class="form-control-file"><br />
+                <span asp-validation-for="image" class="text-danger"></span>
+            </div>   
+  
+            <br />
+            <div class="form-group">
+                <input type="submit" value="@(!string.IsNullOrEmpty(ViewBag.btn) ? ViewBag.btn : "Save")" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

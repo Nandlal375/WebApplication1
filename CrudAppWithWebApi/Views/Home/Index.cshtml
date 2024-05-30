@@ -1,0 +1,50 @@
+﻿@model IEnumerable<DataAccessLayer.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.countryName)
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.countryName)
+                </td>
+            <td>
+                @Html.ActionLink("Edit", "Create", new { Id=item.Id }) |
+                @Html.ActionLink("Detail", "Detail", new { id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", "Home", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
