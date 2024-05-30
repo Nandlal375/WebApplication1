@@ -6,9 +6,7 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
-    // Nandlal prasad 
-
+    // deeppak
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -17,21 +15,24 @@ namespace WebApplication1.Controllers
             _employeeRepository = employeeRepository;
         }
 
+        
         [HttpGet]
         public async Task<ActionResult> GetEmployees()
         {
             try
             {
                 return Ok(await _employeeRepository.GetEmployees());
+                //200
             }
             catch (Exception)
             {
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error in Retrieving Data");
             }
-
         }
 
+
         [HttpGet("{id:int}")]
+
         public async Task<ActionResult<Employee>> GetEmployee(int id) 
         {
             try
@@ -40,6 +41,7 @@ namespace WebApplication1.Controllers
                 if (result == null)
                 {
                     return NotFound();
+                    //404
                 }
                 else
                 {
@@ -52,7 +54,7 @@ namespace WebApplication1.Controllers
                 return StatusCode(StatusCodes.Status500InternalServerError, "Error in Retrieving Data");
             }
         }
-
+        
         [HttpPost]
         public async Task<ActionResult<Employee>> CreateEmployee(Employee employee)
         {
@@ -61,9 +63,12 @@ namespace WebApplication1.Controllers
                 if (employee == null)
                 { 
                  return BadRequest();
+                    //400
                 }
                 var result = await _employeeRepository.AddEmployee(employee);
                 return CreatedAtAction(nameof(GetEmployee), new { id = result.Id }, result);
+                // Ok("Data insert succfelilly");
+                //201
             }
             catch (Exception)
             {
@@ -72,7 +77,8 @@ namespace WebApplication1.Controllers
             }
         }
 
-        [HttpPut("{id}")]
+
+        [HttpPut("{id:int}")]
         public async Task<ActionResult<Employee>> UpdateEmployee(int id, Employee employee)
         {
             try
@@ -80,12 +86,16 @@ namespace WebApplication1.Controllers
                 if (id != employee.Id)
                 {
                     return BadRequest("Id Mismatch");
+                    // 400
                 }
                 var result = await _employeeRepository.GetEmployee(id);
                 if (result == null)
                 {
                     return NotFound($"Employee Id {id} Not Found"); 
+                    //404
                 }
+                //return Ok("Update Data Succeeffully");
+                // 200
                 return await _employeeRepository.UpdateEmployee(employee);
 
             }
@@ -96,6 +106,7 @@ namespace WebApplication1.Controllers
             }
         }
 
+
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<Employee>> DeleteEmp(int id)
         {
@@ -105,8 +116,10 @@ namespace WebApplication1.Controllers
                 if (result == null)
                 {
                     return NotFound($"Employee Id {id} Not Found");
+                    //404
                 }
                 return await _employeeRepository.DeleteEmployee(id);
+                
 
             }
             catch (Exception)
