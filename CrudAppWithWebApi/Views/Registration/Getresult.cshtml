@@ -1,0 +1,43 @@
+﻿@model IEnumerable<DataAccessLayer.Registration>
+
+@{
+    ViewData["Title"] = "Getresult";
+}
+
+
+
+<div>
+    <h4>Registration Detail</h4>
+    <hr />
+   <table class="table">
+       <thead>
+           <tr>
+               <th>@Html.DisplayNameFor(x => x.Pname)</th>
+                <th>@Html.DisplayNameFor(x => x.Pemail)</th>
+                <th>@Html.DisplayNameFor(x => x.Pmobile)</th>
+                <th>@Html.DisplayNameFor(x => x.Paddress)</th>
+                <th>Action</th>
+           </tr>
+       </thead>
+       <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    
+                    <td>@item.Pname</td>
+                    <td>@item.Pemail</td>
+                    <td>@item.Pmobile</td>
+                    <td>@item.Paddress</td>
+                    <td>
+                        @Html.ActionLink("Edit", "Index", "Registration", new {id = item.Pid}) || 
+                        @Html.ActionLink("Delete", "Delete", "Registration", new {id = item.Pid})
+                    </td>
+                </tr> 
+                
+            }
+        </tbody>
+   </table>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,64 @@
+﻿@model DataAccessLayer.Registration
+@{
+    ViewData["Title"] = "Index";
+}
+<h1>Index</h1>
+
+<h4>Registration</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="@(Model?.Pid > 0 ? "UpdateRegistrationList1" : "Index")" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @* <div class="form-group">
+                <label asp-for="Pid" class="control-label"></label>
+                <input asp-for="Pid" class="form-control" />
+                <span asp-validation-for="Pid" class="text-danger"></span>
+            </div> *@
+
+            <div class="form-group">
+                <input type="hidden" asp-for="Pid" />
+                <label asp-for="Pname" class="control-label"></label>
+                <input asp-for="Pname" class="form-control" placeholder="Enter Your Name"/>
+                <span asp-validation-for="Pname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pemail" class="control-label"></label>
+                <input asp-for="Pemail" class="form-control" placeholder="Enter your Email" type="email"/>
+                <span asp-validation-for="Pemail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pmobile" class="control-label"></label>
+                <input asp-for="Pmobile" class="form-control" placeholder="Enter Your Mobile Number" type="number"/>
+                <span asp-validation-for="Pmobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Paddress" class="control-label"></label>
+                <textarea asp-for="Paddress" class="form-control" placeholder="Enter your Address"></textarea>
+                <span asp-validation-for="Paddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Pusername" class="control-label"></label>
+                <input asp-for="Pusername" class="form-control" placeholder="Enter Username"/>
+                <span asp-validation-for="Pusername" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ppassword" class="control-label"></label>
+                <input asp-for="Ppassword" class="form-control" placeholder="Enter your password"/>
+                <span asp-validation-for="Ppassword" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="@(!string.IsNullOrEmpty(ViewBag.btn) ? ViewBag.btn : "Save")" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
