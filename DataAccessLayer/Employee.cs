@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 namespace DataAccessLayer
 {
 
-    //Najim Ansari...
+
     public class Employee
     {
         [Key]
