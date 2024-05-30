@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,8 +10,11 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace DataAccessLayer
 {
+
+    //Najim Ansari...
     public class Employee
     {
         [Key]
@@ -22,7 +26,7 @@ namespace DataAccessLayer
         [DisplayName("Coutry Name")]
         public string countryName { get; set; }
         [NotMapped]
-        public IFormFile image { get; set; }
+        public IFormFile image { get; set; } 
         
         public string imageFileName { get; set; }
     }
