@@ -6,7 +6,6 @@ namespace WebApplication1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    // deeppak
     public class EmployeesController : ControllerBase
     {
         private readonly IEmployeeRepository _employeeRepository;
@@ -14,8 +13,6 @@ namespace WebApplication1.Controllers
         {
             _employeeRepository = employeeRepository;
         }
-
-        
         [HttpGet]
         public async Task<ActionResult> GetEmployees()
         {

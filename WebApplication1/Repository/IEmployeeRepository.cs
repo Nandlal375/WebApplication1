@@ -6,6 +6,9 @@ namespace WebApplication1.Repository
     {
         Task<IEnumerable<Employee>> Search(string name);
         Task<IEnumerable<Employee>> GetEmployees();
+
+
+        Task<IEnumerable<Country>> GetCountryList();
         Task<Employee> GetEmployee(int id);
         Task<Employee> AddEmployee(Employee employee);
         Task<Employee> UpdateEmployee(Employee employee);
