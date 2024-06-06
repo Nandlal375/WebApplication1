@@ -10,6 +10,10 @@ namespace WebApplication1.DataContext
         {
         }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Country> countries { get; set; }
+
+        public DbSet<Registration> registrations { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
