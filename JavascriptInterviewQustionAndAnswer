@@ -1,1 +1,9 @@
+1. => What is the difference between Properties And Attributes in Javascript.
+Answer => Attributes => HTML attributes are used to provide additional information about an HTML element. 
+                        They are specified in the opening tag of the element and are always strings.
+                        (===> It is read only properties.)
+
+
+Properties => DOM properties are the values that can be accessed and modified through the DOM with JavaScript. 
+              They can be of any type, including strings, numbers, objects, and functions.
 
