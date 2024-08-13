@@ -19,6 +19,11 @@ Scaffold-DbContext "server=NANDLAL\SQLEXPRESS01;database=DatabaseFirstEf;trusted
   "DefaultConnection": "Server=DESKTOP-A4IG87P\\SQLEXPRESS;Database=DatabaseFirstEf;user=root;password=;"
 },
 
+"ConnectionStrings": {
+  "DefaultConnection": "Server=DESKTOP-A4IG87P\\SQLEXPRESS;Database=WebApi;user=root;password=;TrustServerCertificate=True;Trusted_Connection=True;MultipleActiveResultSets=true;"
+},
+
+
 ===== Code First Approach //--OR--// Database First Approach Approach For Apply Install Required Package. ========
 1. Microsoft.EntityFrameworkCore.SqlServer.
 2. Microsoft.EntityFrameworkCore.Tools.
