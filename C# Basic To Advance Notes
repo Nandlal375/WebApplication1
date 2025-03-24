@@ -364,6 +364,9 @@ Answer ==> What {First Introduced by the famous computer Scientist Robert J.Mart
                  Five principle of object oriented class design.
                  set of rules and best practice to follow while designing a class structure.
 
+         Solid Principle Definition -> The SOLID principles are five design principles in object-oriented programming that
+          help make software more maintainable, scalable, and understandable.
+
          29.1 => Why Need Solid Principle
          Answer ==> To create understandable, readable, and testable, code that many developers can collaborative work on.
        
